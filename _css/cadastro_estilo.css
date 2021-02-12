@@ -1,0 +1,72 @@
+/*===================================================================================*/
+ /* |  CADASTRO |*/
+.cadastro{
+	align-items: left;
+	justify-content: space-around; 
+}
+
+.grup{
+	margin: 5px;
+	border: solid 1px #000000;
+	padding: 5px;
+}
+/*----------------------------------------*/
+.input-nome{
+	position: relative;
+   	left: 24px;
+  	width: 300px;
+  	/* coloquei margin para ajeitar o edit que ficava em cima do label a direita */
+  	margin: 0 25px 0 0;
+}
+
+.input-idade{
+	width: 50px;
+}
+
+.input-cpf{
+
+}
+/*----------------------------------------*/
+.input-telefone{
+	position: relative;
+	left: 7px;
+	width: 200px;
+	/* coloquei margin para ajeitar o edit que ficava em cima do label a direita */
+	margin-right: 7px ;
+}
+
+.input-email{
+	width: 354px;
+}
+/*----------------------------------------*/
+.input-endereco{
+	width: 620px;
+	margin-bottom: 5px;
+}
+
+.input-cidade{
+	position: relative;
+	left: 18px;
+	/* coloquei margin para ajeitar o edit que ficava em cima do label a direita */
+	margin-right: 19px ;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+*/

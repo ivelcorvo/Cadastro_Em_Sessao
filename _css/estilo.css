@@ -1,0 +1,81 @@
+/*
+margin: direita, esquerda;
+margin: superior, direita e esquerda, inferior;
+margin: superior, direita, inferior  esquerda;
+*/
+/*=======================================================================================================================*/
+/*  | GERAL |*/
+body{	
+	background-color: #696969 ;
+	font-family: Arial;
+	margin: 0;
+}
+
+h1{
+	text-align: center;
+}
+
+.btn{
+	height: 30px;
+	width: 80px;
+	border-radius: 5px;
+}
+
+
+/*=======================================================================================================================*/
+/*  | MENU || CABEÇALHO |*/
+.header{
+	height: 32px;
+	margin: 0  0 20px;
+	padding: 0 10px 0;
+	background-color: #363636;
+}
+/*===========================================*/
+.menu{
+	width: 100%;
+	margin-top: 1px;
+	border: 1px solid steelblue;
+	padding: 0;
+	list-style: none;
+	float: left;
+}
+
+.menu li{
+	position: relative;   /* para posicionar um sub-menu futuramente*/
+	float: left;
+	border-right: 1px solid #c0c0c;
+}
+
+.menu li a{
+	color: steelblue;
+	text-decoration: none;
+	padding: 5px 10px;
+	display: block;
+}
+
+.menu li a:hover{
+	background: #333;
+	color: #fff;
+	-moz-box-shadow: 0 3px 3px #ccc;    /*  deslocamento da sombra (horizontal,vertical,efeito de borrão, cor)  */
+	-webkit-box-shadow: 0 3px 3px #ccc ;
+	text-shadow: 0 0 5px #fff;   /*  deslocamento da sombra (horizontal,vertical,efeito de borrão, cor)  */
+}
+/*  (menu antes)
+.menu li a:hover{
+	background: #333;
+	color: #fff;
+	-moz-box-shadow: 0 3px 10px 0 #ccc;
+	-webkit-box-shadow: 0 3px 10px 0 #ccc ;
+	text-shadow: 0px 0px 5px #fff;
+}*/
+/*=======================================================================================================================*/
+ /*  | CONTEINER || PRINCIPAL  ||  CADASTRO |*/
+ .conteiner{
+	width: 48%;/*75%;*/
+	margin: auto;
+	border: solid 1PX;
+	border-radius: 30px;
+	background-color: #B5B5B5;
+	padding: 20px;
+}
+
