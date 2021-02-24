@@ -1,7 +1,7 @@
 /*===================================================================================*/
  /* |  CADASTRO |*/
 .cadastro{
-	align-items: left;
+	
 	justify-content: space-around; 
 }
 
@@ -9,50 +9,86 @@
 	margin: 5px;
 	border: solid 1px #000000;
 	padding: 5px;
-}
-/*----------------------------------------*/
-.input-nome{
-	position: relative;
-   	left: 24px;
-  	width: 300px;
-  	/* coloquei margin para ajeitar o edit que ficava em cima do label a direita */
-  	margin: 0 25px 0 0;
+	display: flex;
+	flex-wrap: wrap; 
+	justify-content: space-between;
 }
 
-.input-idade{
+.elementos{
+	margin: 0 3px 0;
+}
+
+/*===================================================================================*/
+#nome{
+	width: 280px;
+}
+#idade{
 	width: 50px;
 }
-
-.input-cpf{
-
+/*----------------------------------------*/
+#email{
+	width: 240px;
 }
 /*----------------------------------------*/
-.input-telefone{
-	position: relative;
-	left: 7px;
-	width: 200px;
-	/* coloquei margin para ajeitar o edit que ficava em cima do label a direita */
-	margin-right: 7px ;
+#endereco{
+	width: 230px
 }
 
-.input-email{
-	width: 354px;
+/*===================================================================*/
+/*                           MEDIA QUERIE                            */
+/*===================================================================*/
+
+@media only screen and (max-width: 800px){
+	.grup{
+		padding: 2px;
+	}
+	/*===================================================================*/
+	#nome{
+		width: 280px;
+	}
+	#idade{
+		margin-left: 2.5px;
+	}
+	#cpf{
+		margin-left: 11px; 
+	}
+	/*----------------------------------------*/	
+	#email{
+		margin-left: 15px;
+	}	
+	/*----------------------------------------*/
+	#cidade{
+		margin-left: 18px;
+	}
 }
-/*----------------------------------------*/
-.input-endereco{
-	width: 620px;
-	margin-bottom: 5px;
+
+@media Only screen and (max-width: 400px){
+	.grup{
+		padding: 2px;
+	}
+	/*===================================================================*/
+	#nome{
+		width: 225px;
+	}
+	#cpf{
+		margin-left: 11px; 
+	}	
+	/*----------------------------------------*/
+	#email{
+		width: 207px;
+		margin-left: 15px;
+	}
+	/*----------------------------------------*/	
+	#endereco{
+		width: 200px
+	}
+	#cidade{
+		margin-left: 18px;
+	}
+	#estado{
+		margin-left: 19px;
+	}
 }
-
-.input-cidade{
-	position: relative;
-	left: 18px;
-	/* coloquei margin para ajeitar o edit que ficava em cima do label a direita */
-	margin-right: 19px ;
-
-}
-
-
 
 
 
