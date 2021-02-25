@@ -25,7 +25,16 @@
 	<body>
 		<header>
 			<nav>		
+				<!-- menu desktop -->
 				<ul class="menu">
+					<li><a href="index.php">Home</a></li>
+					<li><a href="lista.php">Listar</a></li>
+					<li><a href="cadastro.php">Cadastro</a></li>
+				</ul>
+				<!-- menu para aparelhos moveis -->
+				<label class='lbl-menu' for='check'>&#8801;</label>
+				<input type='checkbox' id='check'>
+				<ul class="menu-movel">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="lista.php">Listar</a></li>
 					<li><a href="cadastro.php">Cadastro</a></li>
@@ -34,8 +43,8 @@
 		</header>
 
 		<div class='conteiner'>
-			<section class='principal'>
-				<table border="0">
+			<section class='principal-lista'>
+				<table border = "0">
 					<thead>
 						<tr>
 							<th>#</th>

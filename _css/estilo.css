@@ -28,34 +28,36 @@ h1{
 	border-radius: 5px;
 }
 
-
 /*=======================================================================================================================*/
 /*  | MENU || CABEÇALHO |*/
-header{
 
+.lbl-menu, ul.menu-movel, #check{
+	display: none;
 }
 
+/* desktop */
 nav{
 	height: 32px;
-	line-height: 27px;
-	margin: 0  0 20px;
-	padding: 0 10px 0;
+	line-height: 32px;
+	margin-bottom:20px;	
+	border-bottom: 1px solid #000000;
 	background-color: #363636;
+	position: relative;
 }
 
 ul.menu{
-	list-style-type: none;
-	width: 100%;
+	width: 100%;	
+	padding: 0 10px 0;
+	list-style-type: none;	
 	display: flex;
 }
 
 ul.menu li{
 	text-align: left;
-
 }
 
 ul.menu li a{
-	padding: 3px 20px 3px;
+	padding: 0px 20px 0px;
 	color: steelblue;
 	text-decoration: none;	
 	display: block;
@@ -70,10 +72,44 @@ ul.menu li a:hover{
 	text-shadow: 0 0 5px #fff;   /*  deslocamento da sombra (horizontal,vertical,efeito de borrão, cor)  */
 }
 
+/* celular */
+
+.lbl-menu{	
+	font-size: 30px;
+	padding-left: 10px;
+	color: #fff;
+}
+
+ul.menu-movel{
+	width: 35%;
+	margin-top: -200px;
+	background-color: #363636;
+}
+
+ul.menu-movel li{
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px solid #000000;		
+}
+
+ul.menu-movel li a{
+	display: block;
+	text-decoration: none;
+	color: #fff;
+}
+
+ul.menu-movel li a:hover{
+	background-color: rgba(0,0,0,0.1);
+}
+
+#check:checked ~ ul.menu-movel{
+	margin-top: 0;
+}
+
 /*=======================================================================================================================*/
  /*  | CONTEINER || PRINCIPAL  ||  CADASTRO |*/
- .conteiner{
-	width: 50%;/*75%;*/
+ .conteiner{	 
+	width: 50%;
 	margin: auto;
 	border: solid 1PX;
 	border-radius: 30px;
@@ -85,19 +121,38 @@ ul.menu li a:hover{
 /*                           MEDIA QUERIE                            */
 /*===================================================================*/
 
+@media only screen and (max-width: 1000px){
+	ul.menu{
+		display: none;
+	}
+	.lbl-menu, ul.menu-movel{
+		display: block;
+	}
+}
+
 @media only screen and (max-width: 800px){
 	.conteiner{
 		width: 80%;
+	}
+	ul.menu{
+		display: none;
+	}
+	.lbl-menu, ul.menu-movel{
+		display: block;
 	}
 }
 
 @media only screen and (max-width: 500px){
 	.conteiner{
 		width: 95%;
+	}	
+	.lbl-menu, ul.menu-desktop{
+		display: none;
+	}	
+	.lbl-menu, ul.menu-movel{
+		display: block;
 	}
 }
-
-
 
 /*=======================================================================================================================*/
 /*  (menu antes)

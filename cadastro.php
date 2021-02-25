@@ -19,7 +19,16 @@
 	<body>
 		<header>
 			<nav>		
+				<!-- menu desktop -->
 				<ul class="menu">
+					<li><a href="index.php">Home</a></li>
+					<li><a href="lista.php">Listar</a></li>
+					<li><a href="cadastro.php">Cadastro</a></li>
+				</ul>
+				<!-- menu para aparelhos moveis -->
+				<label class='lbl-menu' for='check'>&#8801;</label>
+				<input type='checkbox' id='check'>
+				<ul class="menu-movel">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="lista.php">Listar</a></li>
 					<li><a href="cadastro.php">Cadastro</a></li>
@@ -43,7 +52,7 @@
 
 							<div class='elementos'>
 							<label for="idade">Idade: </label>
-							<input type="text" name="idade" id="idade" 
+							<input type="number" name="idade" id="idade" 
 									class="input-idade" placeholder="idade" 
 									value="">
 							</div>

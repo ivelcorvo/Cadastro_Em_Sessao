@@ -18,7 +18,16 @@
 	<body>
 		<header>
 			<nav>		
-				<ul class='menu'>
+				<!-- menu desktop -->
+				<ul class="menu">
+					<li><a href="index.php">Home</a></li>
+					<li><a href="lista.php">Listar</a></li>
+					<li><a href="cadastro.php">Cadastro</a></li>
+				</ul>
+				<!-- menu para aparelhos moveis -->
+				<label class='lbl-menu' for='check'>&#8801;</label>
+				<input type='checkbox' id='check'>
+				<ul class="menu-movel">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="lista.php">Listar</a></li>
 					<li><a href="cadastro.php">Cadastro</a></li>

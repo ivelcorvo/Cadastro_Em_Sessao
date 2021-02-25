@@ -1,7 +1,6 @@
 /*===================================================================================*/
  /* |  CADASTRO |*/
-.cadastro{
-	
+.cadastro{	
 	justify-content: space-around; 
 }
 
@@ -19,11 +18,12 @@
 }
 
 /*===================================================================================*/
+/* inputs */
 #nome{
 	width: 280px;
 }
 #idade{
-	width: 50px;
+	width: 55px;
 }
 /*----------------------------------------*/
 #email{
@@ -38,7 +38,7 @@
 /*                           MEDIA QUERIE                            */
 /*===================================================================*/
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1400px){
 	.grup{
 		padding: 2px;
 	}
@@ -62,7 +62,7 @@
 	}
 }
 
-@media Only screen and (max-width: 400px){
+@media Only screen and (max-width: 500px){
 	.grup{
 		padding: 2px;
 	}
@@ -72,7 +72,7 @@
 	}
 	#cpf{
 		margin-left: 11px; 
-	}	
+	}
 	/*----------------------------------------*/
 	#email{
 		width: 207px;
