@@ -1,94 +1,41 @@
 /*===================================================================================*/
  /* |  CADASTRO |*/
 .cadastro{	
-	justify-content: space-around; 
+	
 }
 
-.grup{
-	margin: 5px;
-	border: solid 1px #000000;
+fieldset{
+	margin: 20px;	
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px; 
+	padding: 10px;
+}
+
+fieldset legend{
+	width: 90%;
+	text-align: center;
+	border: 1px solid #000000;
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
 	padding: 5px;
-	display: flex;
-	flex-wrap: wrap; 
-	justify-content: space-between;
 }
 
-.elementos{
-	margin: 0 3px 0;
+.campo{
+	width: 100%;
+	height: 30px;
 }
 
 /*===================================================================================*/
 /* inputs */
-#nome{
-	width: 280px;
-}
-#idade{
-	width: 55px;
-}
-/*----------------------------------------*/
-#email{
-	width: 240px;
-}
-/*----------------------------------------*/
-#endereco{
-	width: 230px
-}
+
 
 /*===================================================================*/
 /*                           MEDIA QUERIE                            */
 /*===================================================================*/
 
-@media only screen and (max-width: 1400px){
-	.grup{
-		padding: 2px;
-	}
-	/*===================================================================*/
-	#nome{
-		width: 280px;
-	}
-	#idade{
-		margin-left: 2.5px;
-	}
-	#cpf{
-		margin-left: 11px; 
-	}
-	/*----------------------------------------*/	
-	#email{
-		margin-left: 15px;
-	}	
-	/*----------------------------------------*/
-	#cidade{
-		margin-left: 18px;
-	}
-}
 
-@media Only screen and (max-width: 500px){
-	.grup{
-		padding: 2px;
-	}
-	/*===================================================================*/
-	#nome{
-		width: 225px;
-	}
-	#cpf{
-		margin-left: 11px; 
-	}
-	/*----------------------------------------*/
-	#email{
-		width: 207px;
-		margin-left: 15px;
-	}
-	/*----------------------------------------*/	
-	#endereco{
-		width: 200px
-	}
-	#cidade{
-		margin-left: 18px;
-	}
-	#estado{
-		margin-left: 19px;
-	}
-}
 
 
 

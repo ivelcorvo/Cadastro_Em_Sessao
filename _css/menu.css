@@ -1,0 +1,96 @@
+.lbl-menu, ul.menu-movel, #check{
+	display: none;
+}
+
+/* desktop */
+nav{
+	height: 32px;
+	line-height: 32px;
+	margin-bottom:20px;	
+	border-bottom: 1px solid #000000;
+	background-color: #363636;
+	position: relative;
+}
+
+ul.menu{
+	width: 100%;	
+	padding: 0 10px 0;
+	list-style-type: none;	
+	display: flex;
+}
+
+ul.menu li{
+	text-align: left;
+}
+
+ul.menu li a{
+	padding: 0px 20px 0px;
+	color: steelblue;
+	text-decoration: none;	
+	display: block;
+}
+
+ul.menu li a:hover{
+	background-color: rgba(0,0,0,0.1);	
+	/*
+	color: #fff;
+	-moz-box-shadow: 0 3px 3px #ccc;    /*  deslocamento da sombra (horizontal,vertical,efeito de borrão, cor) 
+	-webkit-box-shadow: 0 3px 3px #ccc ;
+	text-shadow: 0 0 5px #fff;   /*  deslocamento da sombra (horizontal,vertical,efeito de borrão, cor)  */
+}
+
+/* celular */
+
+.lbl-menu{	
+	font-size: 30px;
+	padding-left: 10px;
+	color: #fff;
+}
+
+ul.menu-movel{
+	width: 35%;
+	margin-top: -200px;
+	background-color: #363636;
+}
+
+ul.menu-movel li{
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px solid #000000;		
+}
+
+ul.menu-movel li a{
+	display: block;
+	text-decoration: none;
+	color: #fff;
+}
+
+ul.menu-movel li a:hover{
+	background-color: rgba(0,0,0,0.1);
+}
+
+#check:checked ~ ul.menu-movel{
+	margin-top: 0;
+}
+
+/*===================================================================*/
+/*                           MEDIA QUERIE                            */
+/*===================================================================*/
+
+@media only screen and (max-width: 1000px){
+	ul.menu{
+		display: none;
+	}
+	.lbl-menu, ul.menu-movel{
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 500px){
+	.lbl-menu, ul.menu-desktop{
+		display: none;
+	}	
+	.lbl-menu, ul.menu-movel{
+		display: block;
+	}
+}
