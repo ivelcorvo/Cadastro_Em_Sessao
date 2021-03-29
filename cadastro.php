@@ -1,5 +1,29 @@
 <?php
+	session_start();
+
 	require_once('estados.php');	
+
+	$id = "";
+	$nome = "";
+	$cpf = "";
+	$idade = "";
+	$telefone = "";
+	$email = "";
+	$endereco = "";
+	$cidade = "";
+	$estado = "";
+
+	if(count($_GET)){
+		$id       = $_GET["id"];
+		$nome     = $_SESSION["cadastropessoal"][$id]["nome"]; //array / indice / array associativo
+		$cpf      = $_SESSION["cadastropessoal"][$id]["cpf"];
+		$idade    = $_SESSION["cadastropessoal"][$id]["idade"];
+		$telefone = $_SESSION["cadastropessoal"][$id]["telefone"];
+		$email    = $_SESSION["cadastropessoal"][$id]["email"];
+		$endereco = $_SESSION["cadastropessoal"][$id]["endereco"];
+		$cidade   = $_SESSION["cadastropessoal"][$id]["cidade"];
+		$estado   = $_SESSION["cadastropessoal"][$id]["estado"];
+	}
 ?>
 
 <!DOCTYPE html>
@@ -36,36 +60,45 @@
 			</nav>
 		</header>
 
-		<section class="cadastro conteiner">
+		<section class="principal conteiner">
 			<form action="salvar.php" method="post">
-				<fieldset class="">
+				<fieldset>
 					<legend>DADOS PESSOAIS</legend>				
+					<input type="hidden" name="id" value="<?php echo $id; ?>"> <!-- apenas para receber o id e utiliza em salvar.php para salvar as alterações -->
 					<label for="nome">Nome: </label>
-					<input type="text" name="nome" id="nome" class="campo" required autofocus><br><br>
+					<input type="text" name="nome" id="nome" class="campo" required autofocus value="<?php echo $nome; ?>"><br><br>
 					<label for="cpf">CPF: </label>
-					<input type="text" name="cpf" id="cpf" class="campo" required><br><br>					
+					<input type="text" name="cpf" id="cpf" class="campo" required value="<?php echo $cpf; ?>"><br><br>					
 					<label for="idade">Idade: </label>		
-					<input type="number" name="idade" id="idade" class="campo" required>
+					<input type="number" name="idade" id="idade" class="campo" required value="<?php echo $idade; ?>">
 				</fieldset>
-				<fieldset class="">
+				<fieldset>
 					<legend>CONTATO</legend>
 					<label for="email">Email: </label>
-					<input type="text" name="email" id="email" class="campo" required><br><br>										
+					<input type="text" name="email" id="email" class="campo" required value="<?php echo $email; ?>"><br><br>										
 					<label for="telefone">Telefone: </label>
-					<input type="text" name="telefone" id="telefone" class="campo" required>
+					<input type="text" name="telefone" id="telefone" class="campo" required value="<?php echo $telefone; ?>">
 				</fieldset>
 				<fieldset>
 					<legend>ENDEREÇO</legend>
 					<label for="endereco">Endereço: </label>
-					<input type="text" name="endereco" id="endereco" class="campo" required><br><br>
+					<input type="text" name="endereco" id="endereco" class="campo" required value="<?php echo $endereco; ?>"><br><br>
 					<label for="cidade">Cidade: </label>
-					<input type="text" name="cidade" id="cidade" class="campo" required><br><br>
+					<input type="text" name="cidade" id="cidade" class="campo" required value="<?php echo $cidade; ?>"><br><br>
 					<label for="estado">Estado: </label>
 					<select name="estado" id="estado">
 						<?php
-							foreach($estados as $i => $uf){
+						$uf_select = $estados[0];
+						if($estado != ""){
+							$uf_select = $estado;
+						}
+						foreach($estados as $i => $uf){
+							if($i == $uf_select){
+								echo"<option value='$i' selected>$uf</option>";
+							}else{
 								echo"<option value='$i'>$uf</option>";
 							}
+						}
 						?>
 					</select>
 				</fieldset>

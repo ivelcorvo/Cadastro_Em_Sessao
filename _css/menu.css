@@ -6,7 +6,6 @@
 nav{
 	height: 32px;
 	line-height: 32px;
-	margin-bottom:20px;	
 	border-bottom: 1px solid #000000;
 	background-color: #363636;
 	position: relative;
@@ -41,14 +40,15 @@ ul.menu li a:hover{
 
 /* celular */
 
-.lbl-menu{	
+.lbl-menu{		
+	width: 50px;
 	font-size: 30px;
-	padding-left: 10px;
+	padding-left: 15px;
 	color: #fff;
 }
 
 ul.menu-movel{
-	width: 35%;
+	width: 35%;	
 	margin-top: -200px;
 	background-color: #363636;
 }
@@ -62,7 +62,7 @@ ul.menu-movel li{
 ul.menu-movel li a{
 	display: block;
 	text-decoration: none;
-	color: #fff;
+	color: steelblue;
 }
 
 ul.menu-movel li a:hover{
