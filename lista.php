@@ -1,7 +1,7 @@
-<?php	
-		
+<?php			
 	session_start();
 	//session_destroy();
+	// var_dump($_SESSION["cadastropessoal"]);
 
 	require_once("estados.php");
 
@@ -9,7 +9,7 @@
 
 	if(isset($_SESSION["cadastropessoal"])){
 		$pessoas = $_SESSION["cadastropessoal"];
-	}
+	}	
 ?>
 
 <!DOCTYPE html>

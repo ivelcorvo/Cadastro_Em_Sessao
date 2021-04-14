@@ -1,5 +1,5 @@
 <?php
-	// var_dump($_GET);
+	// var_dump($_GET["id"]);
 	session_start();
 
 	if(isset($_GET["id"]) && $_GET["id"] != ""){
@@ -8,5 +8,4 @@
 	}
 
 	header("Location: lista.php")
-
 ?>

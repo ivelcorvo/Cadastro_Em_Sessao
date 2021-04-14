@@ -1,29 +1,29 @@
 <?php
 	session_start();
-
-	require_once('estados.php');	
-
-	$id = "";
-	$nome = "";
-	$cpf = "";
-	$idade = "";
+	// var_dump($_GET["id"]);
+	$id       = "";
+	$nome     = "";
+	$cpf      = "";
+	$idade    = "";
+	$email    = "";
 	$telefone = "";
-	$email = "";
 	$endereco = "";
-	$cidade = "";
-	$estado = "";
+	$cidade   = "";
+	$estado   = "";
 
-	if(count($_GET)){
+	if(isset($_GET["id"]) && $_GET["id"] != ""){	 
 		$id       = $_GET["id"];
-		$nome     = $_SESSION["cadastropessoal"][$id]["nome"]; //array / indice / array associativo
+		$nome     = $_SESSION["cadastropessoal"][$id]["nome"];
 		$cpf      = $_SESSION["cadastropessoal"][$id]["cpf"];
 		$idade    = $_SESSION["cadastropessoal"][$id]["idade"];
-		$telefone = $_SESSION["cadastropessoal"][$id]["telefone"];
 		$email    = $_SESSION["cadastropessoal"][$id]["email"];
+		$telefone = $_SESSION["cadastropessoal"][$id]["telefone"];
 		$endereco = $_SESSION["cadastropessoal"][$id]["endereco"];
 		$cidade   = $_SESSION["cadastropessoal"][$id]["cidade"];
 		$estado   = $_SESSION["cadastropessoal"][$id]["estado"];
 	}
+
+	require_once("estados.php");
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +34,7 @@
         <meta name='description' content='Cadastro'>
         <meta name='robots' content='index, nofollow'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>        
-        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
 		<title>php</title>
 		<link rel='stylesheet' type="text/css" href='_css/menu.css'>
 		<link rel='stylesheet' type="text/css" href='_css/estilo.css'>
@@ -86,7 +86,7 @@
 					<label for="cidade">Cidade: </label>
 					<input type="text" name="cidade" id="cidade" class="campo" required value="<?php echo $cidade; ?>"><br><br>
 					<label for="estado">Estado: </label>
-					<select name="estado" id="estado">
+					<select name="estado" id="estado" class="campo">
 						<?php
 						$uf_select = $estados[0];
 						if($estado != ""){

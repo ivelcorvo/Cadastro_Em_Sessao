@@ -36,8 +36,8 @@
 			<spam class="titulo">IMPORTATE</spam><br><br>
 			<ul class="aviso-usuario">
 				<li>O objetivo desse site de cadastro é aprender a manipular dados em sessão.</li>
-				<li>Em "Cadatro" o úsuario pode adicionar alguns dados.</li>
-				<li>Em "Listar" o úsuario pode modificar ou apagar um cdastro feito anteriormente.</li>
+				<li>Em "Cadastro" o úsuario pode adicionar alguns dados.</li>
+				<li>Em "Listar" o úsuario pode modificar ou apagar um cadastro feito anteriormente.</li>
 				<li>Os dados ficam salvos em sessão. Não foi utilizado banco de dados, ainda. Ou seja, ao final da sessão todos os dados serão apagados.</li>				
 			</ul>		
 		</section>
