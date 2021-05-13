@@ -21,9 +21,9 @@
         <meta name="robots" content="index, nofollow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta http-equiv="X-UA-Compatible" content="IE=edge">		
-		<title>php</title>
-		<link rel="stylesheet" type="text/css" href="_css/menu.css">
+		<title>Cad - Listar</title>
 		<link rel="stylesheet" type="text/css" href="_css/estilo.css">
+		<link rel="shortcut icon" type="imagem/png" href="_icon/cadastro.png">
 		<meta charset="utf-8">
 	</head>
 	<body>
@@ -46,22 +46,23 @@
 			</nav>
 		</header>
 
-		<section class="principal conteiner">
-			<table border="1">
-				<thead>
-					<tr>
-						<th>#</th>
-						<th>Nome</th>
-						<th>Cpf</th>
-						<th>Idade</th>
-						<th>Telefone</th>
-						<th>Email</th>
-						<th>Cidade</th>
-						<th>Estado</th>
-						<th>Ações</th>	
-					</tr>
-				</thead>
-				<tbody>
+		<main>
+			<section class="principal conteiner">
+				<table border="1">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Nome</th>
+							<th>Cpf</th>
+							<th>Idade</th>
+							<th>Telefone</th>
+							<th>Email</th>
+							<th>Cidade</th>
+							<th>Estado</th>
+							<th>Ações</th>	
+						</tr>
+					</thead>
+					<tbody>
 					<?php
 					foreach($pessoas as $i => $p){
 						$uf = $estados[$p["estado"]];
@@ -81,9 +82,10 @@
 						echo"</tr>";
 					}
 					?>
-				</tbody>
-			</table>
-		</section>
+					</tbody>
+				</table>
+			</section>
+		</main>
 
 		<footer>			
 		</footer>
