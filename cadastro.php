@@ -36,8 +36,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Cad - Cadastro</title>		
-		<link rel="stylesheet" type="text/css" href="_css/estilo.css">
-		<link rel="shortcut icon" type="imagem/png" href="_icon/cadastro.png">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link rel="shortcut icon" type="imagem/png" href="icon/cadastro.png">
 	</head>
 	<body>
 		<header>
@@ -48,10 +48,10 @@
 					<li><a href="lista.php">Listar</a></li>
 					<li><a href="#">Cadastro</a></li>
 				</ul>
-				<!-- menu para aparelhos moveis -->
-				<label class='lbl-menu' for='check'>&#8801;</label>
-				<input type='checkbox' id='check'>
-				<ul class="menu-movel">
+				<!-- menu mobile -->
+				<label class="lbl-mobile" for="check">&#8801;</label>
+                <input type="checkbox" id="check">
+				<ul class="menu-mobile">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="lista.php">Listar</a></li>
 					<li><a href="#">Cadastro</a></li>
@@ -67,15 +67,15 @@
 						<label for="nome">Nome: </label>
 						<input type="text" name="nome" id="nome" class="campo" required autofocus value="<?php echo $nome; ?>"><br><br>
 						<label for="cpf">CPF: </label>
-						<input type="text" name="cpf" id="cpf" class="campo" required value="<?php echo $cpf; ?>"><br><br>					
+						<input type="text" name="cpf" id="cpf" class="campo" maxlength="11" required value="<?php echo $cpf; ?>"><br><br>					
 						<label for="idade">Idade: </label>		
 						<input type="number" name="idade" id="idade" class="campo" required value="<?php echo $idade; ?>">
 					</fieldset>
 					<fieldset>
 						<label for="email">Email: </label>
-						<input type="text" name="email" id="email" class="campo" required value="<?php echo $email; ?>"><br><br>										
+						<input type="email" name="email" id="email" class="campo" required value="<?php echo $email; ?>"><br><br>										
 						<label for="telefone">Telefone: </label>
-						<input type="text" name="telefone" id="telefone" class="campo" required value="<?php echo $telefone; ?>">
+						<input type="tel" name="telefone" id="telefone" class="campo" required value="<?php echo $telefone; ?>">
 					</fieldset>
 					<fieldset>						
 						<label for="endereco">Endereço: </label>

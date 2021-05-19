@@ -22,8 +22,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta http-equiv="X-UA-Compatible" content="IE=edge">		
 		<title>Cad - Listar</title>
-		<link rel="stylesheet" type="text/css" href="_css/estilo.css">
-		<link rel="shortcut icon" type="imagem/png" href="_icon/cadastro.png">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link rel="shortcut icon" type="imagem/png" href="icon/cadastro.png">
 		<meta charset="utf-8">
 	</head>
 	<body>
@@ -35,10 +35,10 @@
 					<li><a href="#">Listar</a></li>
 					<li><a href="cadastro.php">Cadastro</a></li>
 				</ul>
-				<!-- menu para aparelhos moveis -->
-				<label class="lbl-menu" for="check">&#8801;</label>
-				<input type="checkbox" id="check">
-				<ul class="menu-movel">
+				<!-- menu mobile -->
+				<label class="lbl-mobile" for="check">&#8801;</label>
+                <input type="checkbox" id="check">
+				<ul class="menu-mobile">
 					<li><a href="index.php">Home</a></li>
 					<li><a href="#">Listar</a></li>
 					<li><a href="cadastro.php">Cadastro</a></li>
@@ -47,7 +47,7 @@
 		</header>
 
 		<main>
-			<section class="principal conteiner">
+			<section class="conteiner lista">
 				<table border="1">
 					<thead>
 						<tr>
@@ -75,9 +75,9 @@
 							echo"<td>".$p["email"]."</td>";
 							echo"<td>".$p["cidade"]."</td>";
 							echo"<td>".$uf."</td>";
-							echo"<td>";
-								echo"<a class='btn2' href='apagar.php?id=".$i."'><img src='_icon/cancelar.png' class='img-responsivo'></a>";
-								echo"<a class='btn2' href='cadastro.php?id=".$i."'><img src='_icon/exclamacao.png' class='img-responsivo'></a>";
+							echo"<td class='margin-top-10 flex'>";
+								echo"<a class='btn2' href='apagar.php?id=".$i."'><img src='icon/apagar.png' title='Apagar' class='img-responsivo'></a>";
+								echo"<a class='btn2' href='cadastro.php?id=".$i."'><img src='icon/alterar.png' title='Alterar' class='img-responsivo'></a>";
 							echo"</td>";
 						echo"</tr>";
 					}

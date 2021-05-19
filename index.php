@@ -8,8 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Cad - Home</title>
-		<link rel="stylesheet" type="text/css" href="_css/estilo.css">
-		<link rel="shortcut icon" type="imagem/png" href="_icon/cadastro.png">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link rel="shortcut icon" type="imagem/png" href="icon/cadastro.png">
 		<meta charset="utf-8">
 	</head>
 	<body>
@@ -21,10 +21,10 @@
 					<li><a href="lista.php">Listar</a></li>
 					<li><a href="cadastro.php">Cadastro</a></li>
 				</ul>
-				<!-- menu para aparelhos moveis -->
-				<label class="lbl-menu" for="check">&#8801;</label>
-				<input type="checkbox" id="check">
-				<ul class="menu-movel">
+				<!-- menu mobile -->
+				<label class="lbl-mobile" for="check">&#8801;</label>
+                <input type="checkbox" id="check">
+				<ul class="menu-mobile">
 					<li><a href="#">Home</a></li>
 					<li><a href="lista.php">Listar</a></li>
 					<li><a href="cadastro.php">Cadastro</a></li>

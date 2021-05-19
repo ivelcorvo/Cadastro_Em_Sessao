@@ -1,0 +1,253 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+:root{
+	--cor3: #fff;
+	--cor5: #000000;
+
+	--palavraMenu: steelblue;
+	--corPadrao1: #696969;
+	--corPadrao2: #363636;
+	--corSection: #969696;  /*#B5B5B5;*/
+
+}
+/* =========================================================================================== */
+/* GERAL */
+/* =========================================================================================== */
+body{	
+	background-color: var(--corPadrao1);
+	font-family: Arial;
+}
+
+h1{
+	text-align: center;
+}
+
+.img_resposivo{
+	max-width: 100%;
+	height: auto;
+}
+
+.btn{
+	padding: 5px 20px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;	
+	background-color: var(--corPadrao2);
+	color: var(--cor3);
+	cursor: pointer;
+}
+
+.btn2{
+	margin: 0 3px 0;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;	
+	padding: 5px 19px; 
+	line-height: 10px;
+	background-color: var(--corPadrao2);	
+}
+.btn2:hover{
+	background-color: var(--corSection);
+}
+
+.titulo{
+	font-size: 30px;
+}
+
+.margin-top-10{
+	padding-top: 10px;
+}
+
+.flex{
+	display: flex;
+}
+
+/* ========================================= */
+/* MENU */
+/* ========================================== */
+nav{
+    background-color: var(--corPadrao2);
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+
+/* ========================================= */
+/* MENU DESKTOP */
+ul.menu{
+	width: 100%;	
+	list-style-type: none;	
+	display: flex;
+}
+ul.menu li{
+	text-align: left;
+}
+ul.menu li a{
+	padding: 0px 20px 0px;
+	color: var(--palavraMenu);
+	text-decoration: none;	
+	display: block;
+}
+ul.menu li a:hover{
+	background-color: rgba(0,0,0,0.1);	
+}
+
+/* ========================================= */
+/* MENU MOBILE */
+.lbl-mobile, ul.menu-mobile, #check{
+	display: none;
+}
+.lbl-mobile{		
+	width: 60px;
+	font-size: 40px;
+	padding-left: 15px;
+	color: var(--palavraMenu);
+	cursor: pointer;
+}
+ul.menu-mobile{
+	width: 200px;	
+	margin-top: -400px;
+	background-color: var(--corPadrao2);
+}
+ul.menu-mobile li{
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px solid var(--cor5);		
+}
+ul.menu-mobile li a{
+	display: block;
+	text-decoration: none;
+	color: var(--palavraMenu);
+}
+ul.menu-mobile li a:hover{
+	background-color: rgba(0,0,0,0.1);
+}
+#check:checked ~ ul.menu-mobile{
+	margin-top: 0;
+}
+@media only screen and (max-width: 1000px){
+	ul.menu{
+		display: none;
+	}
+	.lbl-mobile, ul.menu-mobile{
+		display: block;
+	}
+}
+
+/* =========================================== */
+/* MAIN */
+.conteiner{	 
+	width: 70%;
+	margin: auto;
+}
+@media only screen and (max-width: 1000px){
+	.conteiner{
+		width: 80%;
+	}
+}
+
+section.principal{	
+	background-color: var(--corSection);
+	margin-top: 30px;
+	margin-bottom: 30px; 
+	border: 1px solid ;
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;	
+	padding: 20px;
+}
+
+footer{
+	width: 100%;
+	height: 200px;
+	background-color: var(--corPadrao2); 
+}
+
+/* =========================================================================================== */
+/* HOME */
+/* =========================================================================================== */
+.aviso-usuario ul{
+	margin-left: 18px;
+}
+
+/* =========================================================================================== */
+/* CADASTRO */
+/* =========================================================================================== */
+ fieldset{
+	margin: 20px;	
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px; 
+	padding: 10px;
+}
+fieldset legend{
+	width: 90%;
+	text-align: center;
+	border: 1px solid var(--cor5);
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	padding: 5px;
+}
+fieldset .campo{
+	width: 100%;
+	height: 30px;
+}
+
+/* =========================================================================================== */
+/* LISTAR */
+/* =========================================================================================== */
+section.lista{
+	overflow: auto;		
+	background-color: var(--corSection);
+	margin-top: 30px;
+	margin-bottom: 30px; 
+	border: 1px solid ;
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;	
+	padding: 20px;
+}
+
+table{
+	margin: auto;
+}
+td{
+	padding: 5px;
+}
+tr:hover{
+	background-color: rgba(0,0,0,0.3);
+}
+
+@media only screen and (max-width: 1200px){	
+	section.lista{
+		overflow: auto;		
+
+		border-radius: 30px  30px 0 0;
+
+   }
+	/* 
+	 GAMBIARRA - tentativa de fazer a tabela ficar responsiva. PRECISO MELHORAR 
+	table{
+		display: flex;
+	} 
+	th{
+		padding: 4.8px 0;	
+		display:block;
+	}
+	td{
+		display: block;
+		
+	}
+	tbody{
+		display: flex;
+	} */
+}
+
