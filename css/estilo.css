@@ -7,11 +7,10 @@
 }
 
 :root{
-	--cor3: #fff;
-	--cor5: #000000;
-
+	--corPalavrabtn: #fff;
+	--corBorda: #000000;
 	--palavraMenu: steelblue;
-	--corPadrao1: #696969;
+	--corFundo: #696969;
 	--corPadrao2: #363636;
 	--corSection: #969696;  /*#B5B5B5;*/
 
@@ -20,7 +19,7 @@
 /* GERAL */
 /* =========================================================================================== */
 body{	
-	background-color: var(--corPadrao1);
+	background-color: var(--corFundo);
 	font-family: Arial;
 }
 
@@ -39,7 +38,7 @@ h1{
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;	
 	background-color: var(--corPadrao2);
-	color: var(--cor3);
+	color: var(--corPalavrabtn);
 	cursor: pointer;
 }
 
@@ -60,23 +59,31 @@ h1{
 	font-size: 30px;
 }
 
-.margin-top-10{
-	padding-top: 10px;
-}
-
 .flex{
 	display: flex;
 }
 
-/* ========================================= */
+.conteiner{	 
+	width: 70%;
+	margin: auto;
+}
+@media only screen and (max-width: 1000px){
+	.conteiner{
+		width: 80%;
+	}
+}
+
+/* ==================================================================================== */
 /* MENU */
-/* ========================================== */
-nav{
+/* ==================================================================================== */
+nav.menu-wrapper{
     background-color: var(--corPadrao2);
     width: 100%;
     height: 50px;
-    line-height: 50px;
-    position: relative;
+    line-height: 50px;    
+    border-bottom: 1px solid var(--corBorda);
+	position: fixed;
+	top: 0;
 }
 
 /* ========================================= */
@@ -87,7 +94,7 @@ ul.menu{
 	display: flex;
 }
 ul.menu li{
-	text-align: left;
+	text-align: center;
 }
 ul.menu li a{
 	padding: 0px 20px 0px;
@@ -110,18 +117,19 @@ ul.menu li a:hover{
 	padding-left: 15px;
 	color: var(--palavraMenu);
 	cursor: pointer;
+	border-bottom: 1px solid var(--corBorda);
 }
 ul.menu-mobile{
-	width: 200px;	
+	width: 100%;	
 	margin-top: -400px;
-	background-color: var(--corPadrao2);
+	background-color: var(--corPadrao2);	
 }
 ul.menu-mobile li{
-	text-align: center;
 	width: 100%;
-	border-bottom: 1px solid var(--cor5);		
+	border-bottom: 1px solid (--corBorda);		
 }
 ul.menu-mobile li a{
+	padding-left: 15px;
 	display: block;
 	text-decoration: none;
 	color: var(--palavraMenu);
@@ -143,19 +151,9 @@ ul.menu-mobile li a:hover{
 
 /* =========================================== */
 /* MAIN */
-.conteiner{	 
-	width: 70%;
-	margin: auto;
-}
-@media only screen and (max-width: 1000px){
-	.conteiner{
-		width: 80%;
-	}
-}
-
 section.principal{	
 	background-color: var(--corSection);
-	margin-top: 30px;
+	margin-top: 80px;
 	margin-bottom: 30px; 
 	border: 1px solid ;
 	border-radius: 30px;
@@ -190,7 +188,7 @@ footer{
 fieldset legend{
 	width: 90%;
 	text-align: center;
-	border: 1px solid var(--cor5);
+	border: 1px solid var(--corBorda);
 	border-radius: 30px;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
@@ -206,7 +204,7 @@ fieldset .campo{
 /* =========================================================================================== */
 section.lista{
 	overflow: auto;			
-	margin-top: 30px;
+	margin-top: 80px;
 	margin-bottom: 30px; 
 	border: 1px solid ;
 	border-radius: 30px;
@@ -229,26 +227,7 @@ tr:hover{
 @media only screen and (max-width: 1200px){	
 	section.lista{
 		overflow: auto;		
-
 		border-radius: 30px 30px 0 0;
-
    }
-
-	/* 
-	 GAMBIARRA - tentativa de fazer a tabela ficar responsiva. PRECISO MELHORAR 
-	table{
-		display: flex;
-	} 
-	th{
-		padding: 4.8px 0;	
-		display:block;
-	}
-	td{
-		display: block;
-		
-	}
-	tbody{
-		display: flex;
-	} */
 }
 

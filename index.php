@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "pt-br">
+<html lang ="pt-br">
 	<head>
 		<meta charset="utf-8">
         <meta name="author" content="Levi Alves">
@@ -10,11 +10,10 @@
 		<title>Cad - Home</title>
 		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		<link rel="shortcut icon" type="imagem/png" href="icon/cadastro.png">
-		<meta charset="utf-8">
 	</head>
 	<body>
 		<header>
-			<nav>		
+			<nav class="menu-wrapper">		
 				<!-- menu desktop -->
 				<ul class="menu">
 					<li><a href="#">Home</a></li>

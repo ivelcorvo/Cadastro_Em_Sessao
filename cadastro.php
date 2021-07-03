@@ -27,7 +27,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang = "pt-br">
+<html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
         <meta name="author" content="Levi Alves">
@@ -41,7 +41,7 @@
 	</head>
 	<body>
 		<header>
-			<nav>		
+			<nav class="menu-wrapper">		
 				<!-- menu desktop -->
 				<ul class="menu">
 					<li><a href="index.php">Home</a></li>

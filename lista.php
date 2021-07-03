@@ -13,7 +13,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang = "pt-br">
+<html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
         <meta name="author" content="Levi Alves">
@@ -28,7 +28,7 @@
 	</head>
 	<body>
 		<header>
-			<nav>		
+			<nav class="menu-wrapper">		
 				<!-- menu desktop -->
 				<ul class="menu">
 					<li><a href="index.php">Home</a></li>
@@ -75,7 +75,7 @@
 							echo"<td>".$p["email"]."</td>";
 							echo"<td>".$p["cidade"]."</td>";
 							echo"<td>".$uf."</td>";
-							echo"<td class='margin-top-10 flex'>";
+							echo"<td class='flex'>";
 								echo"<a class='btn2' href='apagar.php?id=".$i."'><img src='icon/apagar.png' title='Apagar' class='img-responsivo'></a>";
 								echo"<a class='btn2' href='cadastro.php?id=".$i."'><img src='icon/alterar.png' title='Alterar' class='img-responsivo'></a>";
 							echo"</td>";
